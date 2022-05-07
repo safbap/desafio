@@ -1,16 +1,17 @@
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import home from './paginas/home'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import home from "./paginas/home"
 import usuario from './paginas/usuario'
 import favoritos from './paginas/favoritos'
 import pagina404 from './paginas/pagina404'
+import api from './paginas/api/api'
 
 function App() {
 
   return (
     <Router>
-      <Switch>
+      <Link>
         <Route path='/home' exact element={ home }>
           <home />
         </Route>
@@ -23,7 +24,7 @@ function App() {
         <Route path='/pagina404' element={ pagina404 }>
           <pagina404 />
         </Route>
-      </Switch>
+      </Link>
     </Router>
   )
 }
